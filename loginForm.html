@@ -4,164 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    }
 
-    body {
-      background-color: #f4f6f9;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 20px;
-    }
-
-    .login-container {
-      background: #ffffff;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-      width: 100%;
-      max-width: 400px;
-      text-align: center; 
-    }
-
-    /* Style for the top logo */
-    .brand-logo {
-      width: 50px;
-      height: 50px;
-      margin-bottom: 16px;
-      object-fit: contain;
-    }
-
-    .login-container h2 {
-      margin-bottom: 8px;
-      color: #1a1a1a;
-      font-size: 24px;
-      font-weight: 600;
-    }
-
-    .login-container p {
-      color: #666666;
-      font-size: 14px;
-      margin-bottom: 24px;
-    }
- */
-    .form-group {
-      margin-bottom: 20px;
-      text-align: left; 
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 14px;
-      font-weight: 500;
-      color: #333333;
-    }
-
-    .form-group input {
-      width: 100%;
-      padding: 12px 14px;
-      border: 1px solid #cccccc;
-      border-radius: 6px;
-      font-size: 15px;
-      transition: border-color 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .form-group input:focus {
-      outline: none;
-      border-color: #2563eb;
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
-    }
-
-    .form-actions {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 24px;
-      font-size: 14px;
-    }
-
-    .remember-me {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      cursor: pointer;
-      color: #555555;
-    }
-
-    .forgot-password {
-      color: #2563eb;
-      text-decoration: none;
-    }
-
-    .forgot-password:hover {
-      text-decoration: underline;
-    }
-
-    .btn-submit {
-      width: 100%;
-      padding: 12px;
-      background-color: #2563eb;
-      color: #ffffff;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background-color 0.2s ease;
-    }
-
-    .btn-submit:hover {
-      background-color: #1d4ed8;
-    }
-
-    .signup-link {
-      margin-top: 20px;
-      font-size: 14px;
-      color: #666666;
-    }
-
-    .signup-link a {
-      color: #2563eb;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .signup-link a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <div class="login-container">
-    <img src="logo-design.jpg" alt="Company Logo" class="brand-logo" />
 
-    <h2>Welcome back</h2>
-    <p>Please enter your details to sign in.</p>
+    <img src="logo-design.jpg" alt="Company Logo" class="brand-logo">
+
+    <h2>Welcome </h2>
+    <p>Please enter your details to log in.</p>
 
     <form action="/login" method="POST">
+
       <div class="form-group">
         <label for="email">Email Address</label>
+
         <input 
           type="email" 
           id="email" 
           name="email" 
-          placeholder="" 
+          placeholder="account@email.com" 
           required 
           autocomplete="email"
-        />
+        >
       </div>
 
       <div class="form-group">
         <label for="password">Password</label>
+
         <input 
           type="password" 
           id="password" 
@@ -169,23 +42,30 @@
           placeholder="••••••••" 
           required 
           autocomplete="current-password"
-        />
+        >
       </div>
 
       <div class="form-actions">
+
         <label class="remember-me">
-          <input type="checkbox" name="remember" />
+          <input type="checkbox" name="remember">
           <span>Remember me</span>
         </label>
+
         <a href="#" class="forgot-password">Forgot password?</a>
+
       </div>
 
-      <button type="submit" class="btn-submit">Sign In</button>
+      <button type="submit" class="btn-submit">
+        Sign In
+      </button>
+
     </form>
 
     <div class="signup-link">
       Don't have an account? <a href="#">Sign up</a>
     </div>
+
   </div>
 
 </body>
